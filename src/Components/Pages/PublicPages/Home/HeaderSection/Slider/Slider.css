@@ -9,9 +9,8 @@
 }
 
 .slider .no-slide1 {
-    left: -2000px;
     visibility: hidden;
-
+    left: -1300px;
 }
 
 .slider .sliding2 {
@@ -19,6 +18,25 @@
 }
 
 .slider .no-slide2 {
-    right: -40px;
-    display: none;
+    visibility: hidden;
+    left: -1300px;
+}
+
+@media screen and (max-width: 560px) {
+    .slider .sliding1 {
+        left: 0px;
+
+    }
+
+    .slider .no-slide1 {
+        display: none;
+    }
+
+    .slider .sliding2 {
+        left: 0px;
+    }
+
+    .slider .no-slide2 {
+        visibility: hidden;
+    }
 }

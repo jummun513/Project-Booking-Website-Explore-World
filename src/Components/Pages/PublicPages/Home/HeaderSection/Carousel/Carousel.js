@@ -4,6 +4,7 @@ import data1 from '../../../../../../data/sliderdata.json';
 import data2 from '../../../../../../data/sliderdata.json';
 import "./Carousel.css";
 import Slider from "../Slider/Slider";
+import Navbar from "../Navbar/Navbar";
 
 export default function Carousel({ data }) {
 
@@ -35,23 +36,25 @@ export default function Carousel({ data }) {
       })}
       <div className="h-full w-full absolute bg-black opacity-40"></div>
 
-      <div className="body-width absolute flex justify-between text-white w-full">
-        <div className="welcome-text w-3/5">
+      <Navbar></Navbar>
+
+      <div className="body-width bottom-72 md:bottom-56 absolute md:flex justify-between text-white w-full">
+        <div className="welcome-text text-center md:text-start md:w-3/5">
           <h1 className="text-5xl font-bold">Welcome, To Explore World!</h1>
-          <p className="text-xl font-light my-5 leading-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est recusandae ex eius nulla saepe unde, voluptas quia facere veritatis quibusdam.</p>
-          <div className="flex items-center">
-            <button type="button" className="rounded-3xl bg-[#FF7F00] border-[#FF7F00] border-2 mr-3 py-2 px-7 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-[#ff7f00] ease-in duration-200">Search a Tour</button>
-            <button type="button" className="rounded-3xl bg-transparent border-2 mr-3 py-2 px-8 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-black ease-linear duration-200">Go a Tour</button>
+          <p className="text-xl hidden md:flex font-light my-5 leading-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est recusandae ex eius nulla saepe unde, voluptas quia facere veritatis quibusdam.</p>
+          <div className="flex flex-col md:flex-row items-center">
+            <button type="button" className="rounded-3xl mt-6 md:mt-0 mb-2 md:mb-0 bg-[#FF7F00] border-[#FF7F00] border-2 mr-3 py-2 px-7 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-[#ff7f00] ease-in duration-200">Search a Tour</button>
+            <button type="button" className="rounded-3xl mb-2 md:mb-0 bg-transparent border-2 mr-3 py-2 px-8 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-black ease-linear duration-200">Go a Tour</button>
             <button type="button" onClick={nextSlide}
               className="arrow p-1 border-2 rounded-full text-[#c2c2c2] border-[#c2c2c2] hover:text-[#fff] hover:border-[#fff] ease-linear duration-200"><LiaLongArrowAltRightSolid className="h-8 w-8" /></button>
           </div>
         </div>
-        <div className="indicators flex flex-col justify-evenly">
+        <div className="indicators hidden md:flex flex-col justify-evenly">
           {data.map((_, idx) => {
             return (
               <button
                 key={idx}
-                className={`${slide === idx ? "indicator" : "indicator indicator-inactive"} rounded-full h-3 w-3`}
+                className={`${slide === idx ? "indicator" : "indicator indicator-inactive"} rounded-full hidden md:flex h-3 w-3`}
                 onClick={() => setSlide(idx)}
               ></button>
             );

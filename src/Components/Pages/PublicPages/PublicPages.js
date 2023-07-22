@@ -5,7 +5,6 @@ import Home from './Home/Home';
 const PublicPages = () => {
     return (
         <div>
-            {/* <Navbar></Navbar> */}
             <Home></Home>
         </div>
     );

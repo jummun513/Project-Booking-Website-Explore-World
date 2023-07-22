@@ -9,9 +9,9 @@ const Slider = ({ slide1, slide2 }) => {
     const [slide, setSlide] = useState(false);
     return (
         <div className="body-width slider text-white absolute bottom-8 w-full">
-            <div className="flex justify-between">
+            <div className="flex">
                 <div className='w-5/6 z-10'>
-                    <div className={`${slide === false ? 'sliding1' : 'no-slide1'} absolute ease-in duration-500 card-container grid grid-cols-5 justify-center items-center w-5/6`}>
+                    <div className={`${slide === false ? 'sliding1' : 'no-slide1'} absolute md:ease-in-out md:duration-500 card-container grid grid-cols-3 md:grid-cols-5 justify-center items-center w-5/6`}>
                         {
                             slide1.map((data, idx) => {
                                 return (
@@ -25,7 +25,7 @@ const Slider = ({ slide1, slide2 }) => {
                             })}
                     </div>
 
-                    <div className={`${slide === true ? 'sliding2' : 'no-slide2'} absolute ease-out duration-1000 card-container grid grid-cols-5 justify-center items-center w-5/6`}>
+                    <div className={`${slide === true ? 'sliding2' : 'no-slide2'} md:absolute md:ease-in-out md:duration-500 card-container grid grid-cols-3 md:grid-cols-5 justify-center items-center w-5/6`}>
                         {
                             slide2.map((data, idx) => {
                                 return (

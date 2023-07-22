@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 import "./Carousel.css";
+import Slider from "../Slider/Slider";
 
 export default function Carousel({ data }) {
 
@@ -33,7 +34,7 @@ export default function Carousel({ data }) {
       })}
       <div className="h-full w-full absolute bg-black opacity-40"></div>
 
-      <div className="body-width carousel-content absolute flex justify-between text-white w-full">
+      <div className="body-width absolute flex justify-between text-white w-full">
         <div className="welcome-text w-3/5">
           <h1 className="text-5xl font-bold">Welcome, To Explore World!</h1>
           <p className="text-xl font-light my-5 leading-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est recusandae ex eius nulla saepe unde, voluptas quia facere veritatis quibusdam.</p>
@@ -41,7 +42,7 @@ export default function Carousel({ data }) {
             <button type="button" className="rounded-3xl bg-[#FF7F00] border-[#FF7F00] border-2 mr-3 py-2 px-7 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-[#ff7f00] ease-in duration-200">Search a Tour</button>
             <button type="button" className="rounded-3xl bg-transparent border-2 mr-3 py-2 px-8 text-sm font-semibold hover:bg-[#ffffffe6] hover:text-black ease-linear duration-200">Go a Tour</button>
             <button type="button" onClick={nextSlide}
-              className="arrow p-2 border-2 rounded-full hover:text-[#c2c2c2] hover:border-[#c2c2c2] ease-linear duration-200"><LiaLongArrowAltRightSolid className="h-8 w-8" /></button>
+              className="arrow p-1 border-2 rounded-full text-[#c2c2c2] border-[#c2c2c2] hover:text-[#fff] hover:border-[#fff] ease-linear duration-200"><LiaLongArrowAltRightSolid className="h-8 w-8" /></button>
           </div>
         </div>
         <div className="indicators flex flex-col justify-evenly">
@@ -56,6 +57,7 @@ export default function Carousel({ data }) {
           })}
         </div>
       </div>
+      <Slider></Slider>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-
+import data1 from '../../../../../../data/sliderdata.json';
+import data2 from '../../../../../../data/sliderdata.json';
 import "./Carousel.css";
 import Slider from "../Slider/Slider";
 
@@ -14,11 +15,11 @@ export default function Carousel({ data }) {
     setSlide(slide === data.length - 1 ? 0 : slide + 1);
   };
 
-  // useEffect(() => {
-  //   timeRef.current = setTimeout(() => {
-  //     nextSlide();
-  //   }, 4000);
-  // })
+  useEffect(() => {
+    timeRef.current = setTimeout(() => {
+      nextSlide();
+    }, 4000);
+  })
 
   return (
     <div className="carousel relative flex items-center justify-center">
@@ -57,7 +58,7 @@ export default function Carousel({ data }) {
           })}
         </div>
       </div>
-      <Slider></Slider>
+      <Slider slide1={data1.slide1} slide2={data2.slide2}></Slider>
     </div>
   );
 };

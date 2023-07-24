@@ -8,7 +8,7 @@ const Slider = ({ slide1, slide2 }) => {
 
     const [slide, setSlide] = useState(false);
     return (
-        <div className="body-width slider text-white absolute bottom-8 w-full">
+        <div className="body-width slider text-white absolute bottom-8 w-full hidden md:block">
             <div className="flex">
                 <div className='w-5/6 z-10'>
                     <div className={`${slide === false ? 'sliding1' : 'no-slide1'} absolute md:ease-in-out md:duration-500 card-container grid grid-cols-3 md:grid-cols-5 justify-center items-center w-5/6`}>

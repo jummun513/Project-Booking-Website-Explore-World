@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MainSection = () => {
-
+const MostVisited = () => {
     return (
         <div>
+
         </div>
     );
 };
 
-export default MainSection;
+export default MostVisited;

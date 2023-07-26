@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MainSection = () => {
-
+const Tour = () => {
     return (
         <div>
+
         </div>
     );
 };
 
-export default MainSection;
+export default Tour;

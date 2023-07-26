@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import data1 from '../../../../../../data/sliderdata.json';
-import data2 from '../../../../../../data/sliderdata.json';
+import data1 from '../../../../../../data/sliderData.json';
+import data2 from '../../../../../../data/sliderData.json';
 import "./Carousel.css";
 import Slider from "../Slider/Slider";
-import Navbar from "../Navbar/Navbar";
+
 
 export default function Carousel({ data }) {
 
   const timeRef = useRef(null);
-
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
@@ -19,7 +18,7 @@ export default function Carousel({ data }) {
   useEffect(() => {
     timeRef.current = setTimeout(() => {
       nextSlide();
-    }, 4000);
+    }, 50000);
   })
 
   return (
@@ -35,8 +34,6 @@ export default function Carousel({ data }) {
         );
       })}
       <div className="h-full w-full absolute bg-black opacity-40"></div>
-
-      <Navbar></Navbar>
 
       <div className="body-width bottom-1/6 px-4 md:px-0 md:bottom-56 absolute md:flex justify-between text-white w-full">
         <div className="welcome-text text-center md:text-start md:w-3/5">

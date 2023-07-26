@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Header.css';
 import Carousel from "./Carousel/Carousel";
 import dat from "../../../../../data/carouselData.json";
 

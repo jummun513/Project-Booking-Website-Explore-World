@@ -3,10 +3,8 @@
     overflow: hidden;
 }
 
-
 .destination-container {
     display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
 }

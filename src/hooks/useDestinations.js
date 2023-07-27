@@ -1,31 +1,38 @@
+import axios, * as others from 'axios';
 const { useState, useEffect } = require("react");
-const axios = require('axios');
+
 
 const useDestinations = () => {
-
-    const [data, useData] = useState();
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState();
 
     const options = {
         method: 'GET',
-        url: '/src/data/destinationsData.json',
+        url: 'destinationsData.json',
+        params: {
+        },
         headers: {
             'X-RapidAPI-Key': '',
             'X-RapidAPI-Host': ''
         }
-    }
+    };
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             try {
-                const response = await axios.request(options);
-                console.log(response.data);
-            } catch (error) {
+                const res = await axios.get(options);
+                // setData(res);
+                console.log(res);
+            }
+            catch (error) {
                 console.error(error);
             }
-            finally {
-
-            }
+            setLoading(false);
         }
         fetchData();
-    }, [])
+    }, []);
+    return [data, setData, loading];
 };
+
+export default useDestinations;

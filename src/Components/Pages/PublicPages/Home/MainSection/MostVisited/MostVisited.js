@@ -2,28 +2,40 @@ import React, { useContext } from 'react';
 import { destinationContext } from '../../../../../../App';
 import './MostVisited.css';
 import MvCard from './MvCard/MvCard';
+import { LiaLongArrowAltLeftSolid, LiaLongArrowAltRightSolid } from 'react-icons/lia';
 
 
 const MostVisited = () => {
 
     const value = useContext(destinationContext);
+    const sliceValue = value.slice(0, 5);
 
-    const sliceValue = value.slice(0, 7);
-    const mostVisited = true;
+    const clickToSlide = (param) => {
+        const carousel = document?.querySelector(".destination-container");
+        const firstCardWidth = carousel && carousel.querySelector(".mvCard").offsetWidth;
+        firstCardWidth && (carousel.scrollLeft += (param === "left") ? -firstCardWidth : firstCardWidth)
+    }
 
     return (
-        <div className=''>
-            <div className='mt-32 mb-10'>
-                <div className='mb-16'>
+        <div className='product-slider mx-3 md:mt-20 md:mb-20'>
+            <div className='mt-1'>
+                <div className='max-w-screen-xl mx-auto mb-10 md:flex justify-between items-center'>
                     <div>
-                        <h1 className='body-width text-5xl text-[#ff7f00] mb-4 font-semibold'>Explore Tours</h1>
-                        <h1 className='body-width text-xl'>By Popular Destinations</h1>
+                        <h1 className='body-width text-5xl text-[#ff7f00] font-semibold'>Explore Tours</h1>
+                        <h1 className='body-width pt-3 text-xl'>By Popular Destinations</h1>
+                    </div>
+                    <div className='flex items-center mt-5 justify-between'>
+                        <button type="button" className="rounded-lg md:rounded-3xl mb-2 md:mb-0 hover:bg-transparent hover:text-white border-2 mr-3 py-2 px-8 text-sm font-semibold bg-[#ffffffe6] text-black ease-linear duration-200">View All Tours</button>
+                        <div>
+                            <button onClick={() => clickToSlide('left')} className="pre-btn md:p-2 border-2 border-gray-400 text-gray-400 hover:text-white hover:border-white ease-linear duration-200 rounded-full mr-2 md:mr-4"><LiaLongArrowAltLeftSolid className="h-10 w-10" /></button>
+                            <button onClick={() => clickToSlide('right')} className="next-btn md:p-2 border-2 border-gray-400 text-gray-400 hover:text-white hover:border-white ease-linear duration-200 rounded-full"><LiaLongArrowAltRightSolid className="h-10 w-10" /></button>
+                        </div>
                     </div>
                 </div>
-                <div className='destination-container flex justify-center'>
+                <div className='destination-container'>
                     {
                         sliceValue.map((data, idx) =>
-                            <MvCard></MvCard>
+                            <MvCard data={data} key={idx}></MvCard>
                         )
                     }
                 </div>
@@ -33,30 +45,3 @@ const MostVisited = () => {
 };
 
 export default MostVisited;
-
-
-{/* <div key={idx} className='w-[720px] card relative cursor-pointer mb-7 md:mb-0'>
-    <div>
-        <img className='rounded-3xl' src={data.picture} alt="" />
-    </div>
-    <div className='absolute w-full h-full bg-black opacity-50 top-0'></div>
-    <div className='absolute px-2 md:px-4 z-20 bottom-4 md:bottom-10 w-full h-fit'>
-        <div className='flex items-center'>
-            <BsStarFill className='text-yellow-400 mr-1'></BsStarFill>
-            <BsStarFill className='text-yellow-400 mr-1'></BsStarFill>
-            <BsStarFill className='text-yellow-400 mr-1'></BsStarFill>
-            <BsStarHalf className='text-yellow-400 mr-1'></BsStarHalf>
-            <BsStar className='text-yellow-400 mr-1'></BsStar>
-            <p className='text-sm'>({data.review})</p>
-        </div>
-        <h1 className='md:text-2xl font-semibold my-1 md:my-3 hover:text-[#ff7f00] ease-linear duration-200'>{data.heading} | {data.price}</h1>
-        <p className='text-gray-400 text-sm font-semibold italic'>{data.desc}</p>
-        <div className='flex items-center'>
-            <BsClockFill className='mr-2'></BsClockFill>
-            <p className='text-gray-200'>{data.days}</p>
-        </div>
-    </div>
-    <div className='absolute bg-[#ff8000d4] font-semibold rounded-md top-2 md:top-4 right-2 md:right-4 px-4 py-2'>
-        20% off
-    </div>
-</div> */}

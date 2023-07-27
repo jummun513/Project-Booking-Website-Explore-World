@@ -22,7 +22,7 @@ export default function Carousel({ data }) {
   })
 
   return (
-    <div className="carousel relative flex items-center justify-center">
+    <div className="carousel md:bottom-10 relative flex items-center justify-center">
       {data.map((item, idx) => {
         return (
           <img
@@ -35,7 +35,7 @@ export default function Carousel({ data }) {
       })}
       <div className="h-full w-full absolute bg-black opacity-40"></div>
 
-      <div className="body-width bottom-1/6 px-4 md:px-0 md:bottom-56 absolute md:flex justify-between text-white w-full">
+      <div className="max-w-screen-xl mx-auto bottom-24 px-4 md:px-0 md:top-[35%] h-fit absolute md:flex justify-between text-white w-full">
         <div className="welcome-text text-center md:text-start md:w-3/5">
           <h1 className="text-5xl font-bold">Welcome, To Explore World!</h1>
           <p className="text-xl font-light my-5 leading-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est recusandae ex eius nulla saepe unde, voluptas quia facere veritatis quibusdam.</p>
@@ -46,12 +46,12 @@ export default function Carousel({ data }) {
               className="arrow p-1 border-2 rounded-full text-[#c2c2c2] border-[#c2c2c2] hover:text-[#fff] hover:border-[#fff] ease-linear duration-200"><LiaLongArrowAltRightSolid className="h-8 w-8" /></button>
           </div>
         </div>
-        <div className="indicators hidden md:flex flex-col justify-evenly">
+        <div className="indicators hidden md:flex flex-col justify-between h-full">
           {data.map((_, idx) => {
             return (
               <button
                 key={idx}
-                className={`${slide === idx ? "indicator" : "indicator indicator-inactive"} rounded-full hidden md:flex h-3 w-3`}
+                className={`${slide === idx ? "indicator" : "indicator indicator-inactive"} rounded-full hidden md:flex h-3 w-3 mb-5`}
                 onClick={() => setSlide(idx)}
               ></button>
             );

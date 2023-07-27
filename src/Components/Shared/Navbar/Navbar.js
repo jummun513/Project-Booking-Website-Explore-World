@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <div className='absolute top-0 w-full'>
-            <nav className="bg-transparent relative max-w-6xl mx-auto z-50 top-0 left-0">
+            <nav className="bg-transparent relative max-w-screen-xl mx-auto z-50 top-0 left-0">
                 <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center">
                         <span className="self-center title-text text-2xl md:text-3xl font-semibold whitespace-nowrap text-[#ff7f00]">Explore World</span>

@@ -1,1 +1,12 @@
-.destination-container {}
+.product-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.destination-container {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}

@@ -48,7 +48,7 @@ const MostVisited = () => {
 
 
     return (
-        <div className='product-slider px-3 md:pt-20 pb-32 md:pb-64'>
+        <div className='product-slider px-3 mt-40 md:mt-0 md:pt-60 pb-32 md:pb-64'>
             <div className=''>
                 <div className='max-w-screen-xl mx-auto mb-10 md:flex justify-between items-center'>
                     <div>

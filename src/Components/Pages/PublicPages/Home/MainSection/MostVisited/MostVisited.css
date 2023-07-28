@@ -7,7 +7,6 @@
 }
 
 .destination-container {
-    display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
 }

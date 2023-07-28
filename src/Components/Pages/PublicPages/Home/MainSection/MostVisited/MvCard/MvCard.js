@@ -4,7 +4,7 @@ import { BsClockFill, BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
 
 const MvCard = ({ data }) => {
     return (
-        <div className='mvCard  mr-[20px]'>
+        <div className='mvCard mr-1 md:mr-[20px]'>
             <div className='relative cursor-pointer'>
                 <div>
                     <img className='rounded-2xl' src={data.picture} alt="" />

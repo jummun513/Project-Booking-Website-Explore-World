@@ -48,12 +48,12 @@ const MostVisited = () => {
 
 
     return (
-        <div className='product-slider px-3 md:pt-20 md:pb-64'>
-            <div className='mt-1'>
+        <div className='product-slider px-3 md:pt-20 pb-32 md:pb-64'>
+            <div className=''>
                 <div className='max-w-screen-xl mx-auto mb-10 md:flex justify-between items-center'>
                     <div>
-                        <h1 className='body-width text-3xl md:text-5xl text-[#ff7f00] font-semibold'>Explore Tours</h1>
-                        <h1 className='body-width pt-1 md:pt-3 text-base md:text-2xl'>By Popular Destinations</h1>
+                        <h1 className='text-3xl md:text-5xl text-[#ff7f00] font-semibold'>Explore Tours</h1>
+                        <h1 className='pt-1 md:pt-3 text-base md:text-2xl'>By Popular Destinations</h1>
                     </div>
                     <div className='flex items-center mt-5 justify-between'>
                         <button type="button" className="rounded-lg md:rounded-3xl mb-2 md:mb-0 hover:bg-transparent hover:text-white border-2 mr-3 py-2 px-5 md:px-8 text-sm font-semibold bg-[#ffffffe6] text-black ease-linear duration-200">View All Tours</button>
@@ -63,7 +63,7 @@ const MostVisited = () => {
                         </div>
                     </div>
                 </div>
-                <div className='destination-container'>
+                <div className='destination-container flex'>
                     {
                         sliceValue.map((data, idx) =>
                             <MvCard data={data} key={idx}></MvCard>

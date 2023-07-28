@@ -37,7 +37,7 @@ const Search = () => {
     return (
         <div className='absolute w-full px-3 md:px-0'>
             <div className='mb-6 md:mb-10 max-w-screen-xl mx-auto'>
-                <h1 className='text-2xl md:text-4xl font-bold'>Find your next stay</h1>
+                <h1 className='text-3xl font-semibold md:text-5xl md:font-bold'>Find your next stay</h1>
             </div>
             <div className="headerSearch md:h-14 flex flex-col md:flex-row items-center justify-between border-none rounded max-w-6xl mx-auto">
                 <div className="headerSearchItem mb-2 md:mb-0 flex items-center border-2 bg-white border-gray-500 w-full h-14 md:h-full hover:border-2 hover:border-[#ff7f00]">

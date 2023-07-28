@@ -8,7 +8,7 @@ const MainSection = () => {
     return (
         <div className='relative bottom-40'>
             <MostVisited></MostVisited>
-            <div className='absolute w-full text-white bottom-[6.6rem] md:bottom-40'>
+            <div className='absolute w-full text-white bottom-[3rem] md:bottom-28'>
                 <Search></Search>
             </div>
             <Popular></Popular>

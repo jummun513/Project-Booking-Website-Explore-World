@@ -35,7 +35,7 @@ export default function Carousel({ data }) {
       })}
       <div className="h-full w-full absolute bg-black opacity-40"></div>
 
-      <div className="max-w-screen-xl mx-auto bottom-24 px-4 md:px-0 md:top-[35%] h-fit absolute md:flex justify-between text-white w-full">
+      <div className="max-w-screen-xl mx-auto bottom-24 px-4 md:px-0 md:top-[40%] h-fit absolute md:flex justify-between text-white w-full">
         <div className="welcome-text text-center md:text-start md:w-3/5">
           <h1 className="text-5xl font-bold">Welcome, To Explore World!</h1>
           <p className="text-base md:text-xl font-light my-5 leading-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est recusandae ex eius nulla saepe unde, voluptas quia facere veritatis quibusdam.</p>

@@ -10,7 +10,7 @@ const MvCard = ({ data }) => {
                     <img className='rounded-2xl' src={data.picture} alt="" />
                 </div>
                 <div className='absolute z-10 w-full h-full bg-black opacity-50 top-0'></div>
-                <div className='absolute px-2 md:px-4 z-20 bottom-3 md:bottom-10 w-full h-fit'>
+                <div className='absolute px-2 md:px-4 z-20 bottom-4 md:bottom-10 w-full h-fit'>
                     <div className='flex items-center'>
                         <BsStarFill className='text-yellow-400 mr-1'></BsStarFill>
                         <BsStarFill className='text-yellow-400 mr-1'></BsStarFill>
@@ -26,7 +26,7 @@ const MvCard = ({ data }) => {
                         <p className='text-gray-200'>{data.days}</p>
                     </div>
                     <div>
-                        <button type="button" className="rounded md:rounded-lg hover:bg-transparent hover:text-[#ff7f00] text-white border-2 border-[#ff7f00] py-1 mt-1 px-3 md:px-6 md:mt-2 text-sm font-semibold bg-[#ff7f00] ease-linear duration-150">Book Now</button>
+                        <button type="button" className="rounded md:rounded-lg hover:bg-transparent hover:text-[#ff7f00] text-white border-2 border-[#ff7f00] py-1 md:py-2 px-3 md:px-6 md:mt-2 text-sm font-semibold bg-[#ff7f00] ease-linear duration-150">Book Now</button>
                     </div>
                 </div>
                 <div className='absolute z-20 bg-[#ff8000d4] font-semibold rounded-md top-2 md:top-4 right-2 md:right-4 px-2 md:px-4 py-1 md:py-2'>

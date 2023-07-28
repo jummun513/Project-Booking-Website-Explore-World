@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from "./Carousel/Carousel";
 import dat from "../../../../../data/carouselData.json";
+import './Header.css';
 
 
 const Header = () => {

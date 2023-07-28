@@ -1,6 +1,9 @@
 .product-slider {
     position: relative;
     overflow: hidden;
+    background-color: black;
+    width: 100%;
+    color: #fff;
 }
 
 .destination-container {

@@ -12,10 +12,10 @@ const Destinations = () => {
     const value = useContext(destinationContext);
 
     return (
-        <div className='relative'>
+        <div className='relative destination'>
             <Navbar></Navbar>
             <Banner url={imgUrl} alt={'Banner of Destination routes'}></Banner>
-            <Search></Search>
+            <div className='absolute top-36 md:top-48 w-full'><Search></Search></div>
             <div className='absolute top-[28rem] w-full mt-20 md:mt-0 px-2 md:px-0'>
                 <div className='max-w-6xl mx-auto'>
                     <h1 className='text-2xl md:text-3xl font-medium text-[#ff7f00]'>Most Popular</h1>

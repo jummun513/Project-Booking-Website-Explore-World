@@ -35,7 +35,7 @@ const Search = () => {
 
 
     return (
-        <div className='absolute top-36 md:top-48 w-full px-3 md:px-0'>
+        <div className='absolute w-full px-3 md:px-0'>
             <div className='mb-6 md:mb-10 max-w-screen-xl mx-auto'>
                 <h1 className='text-2xl md:text-4xl font-bold'>Find your next stay</h1>
             </div>

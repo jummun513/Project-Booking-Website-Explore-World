@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import NotFound from './components/Pages/NotFound/NotFound';
-import Home from './components/Pages/PublicPages/Home/Home';
-import Destinations from './components/Pages/PublicPages/Destinations/Destinations';
-import Blogs from './components/Pages/PublicPages/Blogs/Blogs';
-import About from './components/Pages/PublicPages/About/About';
-import Hotels from './components/Pages/PublicPages/Hotels/Hotels';
-import Tours from './components/Pages/PublicPages/Tours/Tours';
+import NotFound from './Components/Pages/NotFound/NotFound';
+import Home from './Components/Pages/PublicPages/Home/Home';
+import Destinations from './Components/Pages/PublicPages/Destinations/Destinations';
+import Blogs from './Components/Pages/PublicPages/Blogs/Blogs';
+import About from './Components/Pages/PublicPages/About/About';
+import Hotels from './Components/Pages/PublicPages/Hotels/Hotels';
+import Tours from './Components/Pages/PublicPages/Tours/Tours';
 import data from './data/destinationsData.json';
 import { createContext } from 'react';
 
